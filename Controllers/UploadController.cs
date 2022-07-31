@@ -16,15 +16,16 @@ namespace NewReactJSDemo.Controllers
         [HttpPost("UploadFile")]
         public async Task<IActionResult> UploadFile(IFormFile files)
         {
-            var filePath = Path.GetTempFileName();
+            var filePath = Path.GetTempPath();
 
-                if (files.Length > 0)
-                {
-                using var stream = new FileStream(filePath, FileMode.Create);
+            if (files.Length > 0)
+            {
+                var filename = Path.Combine(filePath, files.FileName);
+                using var stream = new FileStream(filename, FileMode.Create);
                 await files.CopyToAsync(stream);
             }
 
-            return Ok(new { filePath });
+            return Ok("file Uploaded");
         }
     }
 }

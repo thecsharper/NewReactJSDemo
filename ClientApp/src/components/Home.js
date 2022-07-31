@@ -6,8 +6,8 @@ export class Home extends Component {
   render () {
     return (
       <div>
-        <h1>Hello, world!</h1>
-        <p>Welcome to your new single-page application, built with:</p>
+        <h1>React forms POST demo</h1>
+            <p>Simple example of a POST file upload to a controller endpoint with React forms, axios and AspNetCore.Mvc.</p>
         <ul>
           <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>
           <li><a href='https://facebook.github.io/react/'>React</a> for client-side code</li>
